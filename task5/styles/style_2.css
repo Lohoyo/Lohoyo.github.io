@@ -1,0 +1,36 @@
+p {
+    float: left;
+    margin-right: 3rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+header, main {
+    float: left;
+}
+
+header {
+    background-color: rgb(0, 140, 255);
+    height: 730px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: white;
+}
+
+main {
+    margin-left: 2rem;
+}

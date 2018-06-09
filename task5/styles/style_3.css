@@ -1,0 +1,46 @@
+h1 {
+    background-color: rgba(53, 53, 50, 0.664);
+    color: white;
+    margin: 0;
+    line-height: 3;
+    padding-left: 2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+
+div {
+    border: 1px solid rgba(221, 217, 217, 0.842);
+}
+
+.left {
+    background-color: rgba(126, 123, 123, 0.514);
+}
+
+p {
+    float: left;
+    margin-right: 3rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+dt, dd {
+    display: inline;
+    font-size: 1.5rem;
+}
+
+dd {
+    margin-left: 0;
+}
+
+.part {
+    display: block;
+    border: none;
+    margin-left: 1rem;
+}
+
+h2 {
+    line-height: 6;
+}

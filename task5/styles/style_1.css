@@ -1,0 +1,24 @@
+h1 {
+    margin-bottom: 2.5rem;
+}
+
+p {
+    float: left;
+    margin-right: 3rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
