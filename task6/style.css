@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* 头部 */
+
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#subHeader {
+    width: 960px;
+    height: 6rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+#subHeader p:nth-of-type(2) {
+    position: absolute;
+    top: -1.5rem;
+    right: 0;
+    font-size: 1.5rem;
+}
+
+#subHeader>p {
+    color: white;
+    font-size: 2rem;
+    line-height: 3;
+    margin-top: 0;
+}
+
+#subHeader a {
+    color: white;
+}
+
+/* Banner */
+
+section {
+    height: 25rem;
+    background-color: greenyellow;
+    position: relative;
+}
+
+section ul {
+    position: absolute;
+    right: calc(50% - 480px);
+    bottom: 1rem;
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+section li {
+    float: left;
+}
+
+section a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    height: 3rem;
+    width: 2rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    margin-right: 0.5rem;
+    border:0.1rem solid black;
+    line-height: 30px;
+}
+
+section a.active {
+    background-color: white;
+    height: 4rem;
+    position: relative;
+    bottom: 1rem;
+}
+
+section article {
+    position: absolute;
+}
+
+section .active-panel {
+    z-index: 1;
+}
+
+/* 主导航区域 */
+
+nav {
+    font-size: 1.6rem;
+    border-bottom: 0.1rem solid grey;    
+}
+
+nav ul {
+    margin-left: calc(50% - 480px);
+    padding-left: 0;
+    margin-bottom: -0.1rem;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    border: 0.1rem solid grey;
+    border-radius: 1rem 1rem 0 0; 
+    line-height: 2;
+    width: 8rem;
+    text-align: center;
+    background-color: rgb(200, 200, 200);
+    margin-right: -0.3em;
+    position: relative;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav .active {
+    background-color: white;
+    border-bottom-color: white;
+}
+
+/* 主要内容区域 */
+
+main {
+    font-size: 1.6rem;
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main article {
+    padding: 70px 80px;
+    flex: 1;
+    border: 0.1rem solid grey;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+main article:nth-of-type(2) {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* 页脚 */
+
+footer {
+    text-align: center;
+    font-size: 1.6rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 75px;
+}
