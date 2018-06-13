@@ -1,0 +1,593 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    width: 1600px;
+    height: 6274px;
+    margin: 0 auto;
+}
+
+/* 第一部分 */
+
+header {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('images/页眉的背景.jpg');
+    height: 998px;
+}
+
+header h2, header h3, header p {
+    text-align: center;
+}
+
+header h2 {
+    color: white;
+    font-size: 4rem;
+    line-height: 3;
+    margin-top: 0;
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+
+header p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+header h2+p {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+header h3 {
+    color: white;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-weight: normal;
+    margin-top: 50px;
+}
+
+header h3+p {
+    letter-spacing: 1px;
+}
+
+header form {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: 1000px;
+    margin: 0 auto;
+    height: 250px;
+    margin-top: 150px;
+    border-radius: 3px;
+}
+
+header input {
+    margin-right: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    line-height: 2.8;
+    width: 270px;
+    border-radius: 3px;
+    padding-left: 1rem;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+header form input:nth-of-type(1) {
+    margin-left: 120px;
+}
+
+header button {
+    line-height: 3;
+    width: 150px;
+    word-spacing: 1px;
+    position: relative;
+    top:0.5px;
+    border-radius: 2px;
+    border: none;
+}
+
+/* 第二部分 */
+
+main article:first-of-type {
+    height: 710px;
+}
+
+main article:first-of-type p, main article:first-of-type h2 {
+    text-align: center;
+} 
+
+main article:first-of-type p {
+    margin-top: 0;
+    padding-top: 90px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+main article:first-of-type h2 {
+    font-size: 3rem;
+    font-weight: lighter;
+    margin-top: 20px;
+} 
+
+main article:first-of-type dl {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 250px;
+}
+
+main article:first-of-type section {
+    margin-right: 150px;
+}
+
+main article:first-of-type dt {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+
+}
+
+main article:first-of-type dd {
+    margin-left: 0;
+    margin-bottom: 60px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+main article:first-of-type section:nth-of-type(1) {
+    background-image: url('images/Iphone Icon.png');
+    background-repeat: no-repeat;
+    background-position: 40px 5px;
+    padding-left: 100px;
+}
+
+main article:first-of-type section:nth-of-type(2) {
+    background-image: url('images/Check Icon.png');
+    background-repeat: no-repeat;
+    background-position: 30px 5px;
+    padding-left: 100px;
+}
+
+main article:first-of-type section:nth-of-type(3) {
+    background-image: url('images/Pencil Icon.png');
+    background-repeat: no-repeat;
+    background-position: 30px 5px;
+    padding-left: 100px;
+}
+
+main article:first-of-type section:nth-of-type(4) {
+    background-image: url('images/Settings Icon.png');
+    background-repeat: no-repeat;
+    background-position: 30px 5px;
+    padding-left: 100px;
+}
+
+/* 第三部分 */
+
+main article:nth-of-type(2) {
+    height: 800px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('images/第三部分的背景.jpg');
+    position: relative;
+}
+
+/* 第三部分的左半部分 */
+
+main article:nth-of-type(2) section:first-of-type {
+    margin-left: 20%;
+    margin-top: 150px;
+    float: left;
+}
+
+main article:nth-of-type(2) section:first-of-type h2 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: white;
+}
+
+main article:nth-of-type(2) section:first-of-type p {
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+main article:nth-of-type(2) section:first-of-type a {
+    display: inline-block;
+    text-align: center;
+    line-height: 3;
+    width: 220px;
+    margin-top: 45px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+main article:nth-of-type(2) section:first-of-type a:first-of-type {
+    background-color: white;
+    color: black;
+}
+
+main article:nth-of-type(2) section:first-of-type a:nth-of-type(2) {
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    margin-left: 25px;
+}
+
+/* 第三部分的右半部分 */
+
+main article:nth-of-type(2) section:nth-of-type(2) {
+    background: url('images/IPad.png');
+    height: 600px;
+    margin-top: 100px;
+    width: 637px;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) .bg {
+    box-sizing: border-box;
+    background-color: white;
+    width: 720px;
+    height: 542px;
+    position: relative;
+    left: 61px;
+    top: 7px;
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) h2 {
+    text-align: center;
+    padding-top: 67.5px;
+    position: relative;
+    left: 80px;
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) p {
+    text-align: center;
+    margin-bottom: 67.5px;
+    color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    left: 80px;
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) dl {
+    display: flex;
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) dl div {
+    padding-top: 137px;
+    width: 177px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1),
+                -1px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) dl div:nth-of-type(1) {
+    margin-left: 50px;
+    margin-right: 25px;
+    background-image: url('images/教程图标.jpg');
+    background-repeat: no-repeat;
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) dl div:nth-of-type(2) {
+    margin-right: 25px;
+    background-image: url('images/指南图标.jpg');
+    background-repeat: no-repeat;
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) dl div:nth-of-type(3) {
+    background-image: url('images/示例图标.jpg');
+    background-repeat: no-repeat;
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) a {
+    text-decoration: none;
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) dt {
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    color: black;
+}
+
+main article:nth-of-type(2) section:nth-of-type(2) dd {
+    margin-left: 0;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.4);
+    padding-bottom: 30px;
+    padding-left: 10px;
+    line-height: 1.5;
+}
+
+/* 第四部分 */
+
+main article:nth-of-type(3) {
+    height: 580px;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+main article:nth-of-type(3) h2 {
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 70px;
+    font-weight: lighter;
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+main article:nth-of-type(3) ul {
+    display: flex;
+    padding-left: 220px;
+    padding-right: 220px;
+}
+
+main article:nth-of-type(3) li {
+    list-style-type: none;
+    text-align: center;
+    flex: 1;
+    line-height: 1.5;
+    padding-top: 80px;
+    color: rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+main article:nth-of-type(3) li:nth-of-type(1) img {
+    position: absolute;
+    bottom: 250px;
+    left: 132px;
+}
+
+main article:nth-of-type(3) li:nth-of-type(2) img {
+    position: absolute;
+    bottom: 250px;
+    left: 155px;
+}
+
+main article:nth-of-type(3) li:nth-of-type(3) img {
+    position: absolute;
+    bottom: 250px;
+    left: 136px;
+}
+
+/* 第五部分 */
+
+main article:nth-of-type(4) {
+    height: 1000px;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+main article:nth-of-type(4) section {
+    margin: 0 auto;
+    width: 970px;
+}
+
+main article:nth-of-type(4) section p {
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* 第五部分的上半部分 */
+
+main article:nth-of-type(4) section:nth-of-type(1) {
+    padding-top: 115px;
+    padding-bottom: 110px;
+}
+
+main article:nth-of-type(4) section:nth-of-type(1) img {
+    float: left;
+}
+
+main article:nth-of-type(4) section:nth-of-type(1) h3, main article:nth-of-type(4) section:nth-of-type(1) p {
+    font-weight: normal;
+    position: relative;
+    top: 50px;
+    left: 90px;
+    line-height: 1.8;
+}
+
+/* 第五部分的下半部分 */
+
+.clearfix {
+    clear: both;
+}
+
+main article:nth-of-type(4) section:nth-of-type(2) img {
+    float: right;
+}
+
+main article:nth-of-type(4) section:nth-of-type(2) h3, main article:nth-of-type(4) section:nth-of-type(2) p {
+    font-weight: normal;
+    position: relative;
+    top: 60px;
+    line-height: 1.8;
+}
+
+/* 第六部分 */
+
+main article:nth-of-type(5) {
+    height: 1084px;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+main article:nth-of-type(5) h2 {
+    font-weight: lighter;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+main article:nth-of-type(5) p {
+    line-height: 1.5;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 60px;
+    font-size: 20px;
+}
+
+main article:nth-of-type(5) div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 970px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+main article:nth-of-type(5) a:hover {
+    background-image: url('images/灰色底.png');
+    background-repeat: no-repeat;
+}
+
+main article:nth-of-type(5) img {
+    margin-bottom: 25px;
+    position: relative;
+    z-index: -1;
+}
+
+/* 第七部分 */
+
+main article:nth-of-type(6) {
+    height: 700px;
+}
+
+/* 第七部分的左半部分 */
+
+main article:nth-of-type(6) form {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    width: 470px;
+    height: 560px;
+    float: left;
+    margin-left: 314px;
+    margin-top: 71px;
+}
+
+main article:nth-of-type(6) form p {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+main article:nth-of-type(6) form input {
+    display: block;
+    margin: 0 auto;
+    width: 352px;
+    height: 48px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    padding-left: 16px;
+    margin-bottom: 24px;
+}
+
+main article:nth-of-type(6) form textarea {
+    display: block;
+    margin: 0 auto;
+    width: 336px;
+    height: 142px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+main article:nth-of-type(6) form button {
+    display: block;
+    margin: 0 auto;
+    width: 370px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+/* 第七部分的右半部分 */
+
+main article:nth-of-type(6) section {
+    float: left;
+    margin-left: 130px;
+    margin-top: 161px;
+}
+
+main article:nth-of-type(6) h2 {
+    font-size: 3rem;
+    font-weight: lighter;
+    margin-bottom: 25px;
+    margin-top: 0;
+}
+
+main article:nth-of-type(6) p {
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+main article:nth-of-type(6) ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+main article:nth-of-type(6) li {
+    line-height: 1.5;
+    padding-left: 40px;
+    margin-bottom: 35px;
+}
+
+main article:nth-of-type(6) li:nth-of-type(1) {
+    background-image: url('images/Map Icon.png');
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+}
+
+main article:nth-of-type(6) li:nth-of-type(2) {
+    background-image: url('images/Phone Icon.png');
+    background-repeat: no-repeat;
+}
+
+main article:nth-of-type(6) li:nth-of-type(3) {
+    background-image: url('images/Mail Icon.png');
+    background-repeat: no-repeat;
+}
+
+/* 第八部分 */
+
+footer {
+    height: 410px;
+    background-color: black;
+}
+
+footer section {
+    float: left;
+    margin-left: 200px;
+    margin-top: 80px;
+}
+
+footer h3 {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 3;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+footer img {
+    margin-right: 25px;
+    filter: brightness(0.3);
+}
