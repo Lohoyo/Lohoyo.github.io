@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+
+    <script>
+
+        //第一步，最低要求：在Console中按行输出 n * m = t
+
+        // for (var i = 0; i < 9; i++) {
+        //     for (var j = i; j < 9; j++) {
+        //         console.log((i + 1) + " * " + (j + 1) + " = " + ((i + 1) * (j + 1)));
+        //     }
+        // }
+
+        //然后，尝试在网页中，使用table来实现一个九九乘法表
+    
+        var body = document.querySelector('body')
+        var table = document.createElement('table');
+        body.appendChild(table);
+
+        var caption = document.createElement('caption');
+        table.appendChild(caption);        
+        caption.textContent = '九九乘法表';
+
+        for (var i = 0; i < 9; i++) {
+            var tr = document.createElement('tr');
+            table.appendChild(tr);
+            for (var j = 0; j < i + 1; j++) {
+                var td = document.createElement('td');
+                tr.appendChild(td);
+                td.textContent = (j + 1) + " * " + (i + 1) + " = " + ((i + 1) * (j + 1));
+                td.style.paddingRight = "10px";
+            }
+        }
+    </script>
+
+</body>
+</html>
