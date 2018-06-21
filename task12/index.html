@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript Part4</title>
+
+</head>
+<body>            
+    <div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
+    <button id="fade-btn">淡出</button>
+
+    <script>
+        var div = document.querySelector('div');
+        var btn = document.querySelector('button');
+
+        var intervalID = null;
+        btn.addEventListener('click', function() {
+            if (btn.textContent === '淡出') {
+                div.style.opacity = 1;
+                intervalID = window.setInterval(fade, 10);
+            } else {
+                div.style.opacity = 0;
+                intervalID = window.setInterval(appear, 10);
+            }
+            btn.setAttribute('disabled', '');
+        })
+
+        function fade() {
+            div.style.opacity -= 0.01;
+            if (div.style.opacity === '0') {
+                window.clearInterval(intervalID);
+                btn.removeAttribute('disabled');
+                btn.textContent = '淡入';
+            }
+        }
+
+        function appear() {
+            div.style.opacity = Number(div.style.opacity) + 0.01;
+            if (div.style.opacity === '1') {
+                window.clearInterval(intervalID);
+                btn.removeAttribute('disabled');
+                btn.textContent = '淡出';
+            }
+        }        
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <title>IFE Task12 Part1</title>
+  </head>
+  <body>
+    <input id="name" type="text">    
+    <button id="submit-btn">Submit</button>
+
+    <script>
+        var btn = document.querySelector('button');
+        var input = document.querySelector('input');
+        
+        btn.addEventListener('click', function() {
+            console.log(input.value);
+        })
+        window.onkeypress = function(e) {
+            if (document.activeElement.id === 'name') {
+                if (e.keyCode === 13) {
+                    console.log(input.value);
+                } else if (e.keyCode === 27) {
+                    input.value = '';
+                }
+            }
+        }
+    </script>
+  </body>
+</html>

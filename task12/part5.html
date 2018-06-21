@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript Part5</title>
+    <style>
+        div {
+            background-image: url('erik_ce204002.jpg');
+            height: 480px;
+            width: 480px;
+        }
+    </style>
+</head>
+<body>      
+    <div></div>      
+    <script>
+        var div = document.querySelector('div');
+        div.style.backgroundPositionY = 0;
+        var intervalID = window.setInterval(move, 100);
+        function move() {
+            div.style.backgroundPositionY = (parseInt(div.style.backgroundPositionY) - 480) + 'px';
+            if (div.style.backgroundPositionY === '-7680px') {
+                window.clearInterval(intervalID);
+                intervalID = window.setInterval(moveBack, 100);
+            }
+        }
+        function moveBack() {
+            div.style.backgroundPositionY = (parseInt(div.style.backgroundPositionY) + 480) + 'px';
+            if (div.style.backgroundPositionY === '0px') {
+                window.clearInterval(intervalID);
+                intervalID = window.setInterval(move, 100);
+            }
+        }
+    </script>
+</body>
+</html>
