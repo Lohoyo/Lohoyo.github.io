@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE Task13 Part2</title>
+</head>
+
+
+<body>      
+    <div>
+        <label>String A:
+            <input id="radio-a" type="radio" checked="true" name="str-obj" value="a">
+        </label>
+        <textarea id="str-a"></textarea>
+        <label>String B:
+            <input id="radio-b" type="radio" name="str-obj" value="b">
+        </label>
+        <textarea id="str-b"></textarea>        
+        <label>Num A：<input id="num-a" type="number" value="0"></label>
+        <label>Num B：<input id="num-b" type="number" value="1"></label>
+    </div>
+    <div>
+        <button>获取当前选中输入的内容长度</button>
+        <button>当前选中输入中的第3个字符</button>
+        <button>把两个输入框的文字连接在一起输出（concat）</button>
+        <button>输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）</button>
+        <button>输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）</button>
+        <button>使用slice获取选中输入框内容的部分内容，参数为num-a及num-b</button>
+        <button>当前选中输入框的行数</button>
+        <button>使用substr获取选中输入框内容的子字符串，参数为num-a及num-b</button>
+        <button>把所选输入框中的内容全部转为大写</button>
+        <button>把所选输入框中的内容全部转为小写</button>
+        <button>把所选输入框中内容的半角空格全部去除</button>
+        <button>把所选输入框中内容的a全部替换成另外一个输入框中的内容</button>
+    </div>
+    <p id="result"></p>
+
+    <script>
+        var btn1 = document.querySelector('div:last-of-type button:nth-of-type(1)');
+        var btn2 = document.querySelector('div:last-of-type button:nth-of-type(2)');
+        var btn3 = document.querySelector('div:last-of-type button:nth-of-type(3)');
+        var btn4 = document.querySelector('div:last-of-type button:nth-of-type(4)');
+        var btn5 = document.querySelector('div:last-of-type button:nth-of-type(5)');
+        var btn6 = document.querySelector('div:last-of-type button:nth-of-type(6)');
+        var btn7 = document.querySelector('div:last-of-type button:nth-of-type(7)');
+        var btn8 = document.querySelector('div:last-of-type button:nth-of-type(8)');
+        var btn9 = document.querySelector('div:last-of-type button:nth-of-type(9)');
+        var btn10 = document.querySelector('div:last-of-type button:nth-of-type(10)');
+        var btn11 = document.querySelector('div:last-of-type button:nth-of-type(11)');
+        var btn12 = document.querySelector('div:last-of-type button:nth-of-type(12)');
+        var radio1 = document.querySelector('#radio-a');
+        var radio2 = document.querySelector('#radio-b');
+        var p = document.querySelector('p');
+        var text1 = document.querySelector('#str-a');
+        var text2 = document.querySelector('#str-b');
+        var num1 = document.querySelector('#num-a');
+        var num2 = document.querySelector('#num-b');
+
+        // 获取当前选中输入的内容长度
+        btn1.addEventListener('click', function() {
+            if (radio1.checked) {
+                p.textContent = text1.textLength;
+            } else if (radio2.checked) {
+                p.textContent = text2.textLength;
+            } else {
+                p.textContent = '你还没选';
+            }
+        });
+
+        // 当前选中输入中的第3个字符
+        btn2.addEventListener('click', function() {
+            if (radio1.checked) {
+                p.textContent = text1.textContent.charAt(2);
+            } else if (radio2.checked) {
+                p.textContent = text2.textContent.charAt(2);
+            } else {
+                p.textContent = '你还没选';
+            }
+        });        
+
+        // 把两个输入框的文字连接在一起输出（concat）
+        btn3.addEventListener('click', function() {
+            p.textContent = text1.textContent.concat(text2.textContent);
+        });
+
+        // 输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）
+        btn4.addEventListener('click', function() {
+            p.textContent = text1.textContent.indexOf(text2.textContent);
+        });
+
+        // 输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）
+        btn5.addEventListener('click', function() {
+            p.textContent = text2.textContent.lastIndexOf(text1.textContent);
+        });
+
+        // 使用slice获取选中输入框内容的部分内容，参数为num-a及num-b
+        btn6.addEventListener('click', function() {
+            if (radio1.checked) {
+                p.textContent = text1.textContent.slice(num1.value, num2.value);
+            } else if (radio2.checked) {
+                p.textContent = text2.textContent.slice(num1.value, num2.value);
+            } else {
+                p.textContent = '你还没选';
+            }
+        });        
+
+        // 当前选中输入框的行数
+        btn7.addEventListener('click', function() {
+            if (radio1.checked) {
+                p.textContent = text1.rows;
+            } else if (radio2.checked) {
+                p.textContent = text2.rows;
+            } else {
+                p.textContent = '你还没选';
+            }
+        });
+
+        // 使用substr获取选中输入框内容的子字符串，参数为num-a及num-b
+        btn8.addEventListener('click', function() {
+            if (radio1.checked) {
+                p.textContent = text1.textContent.substr(num1.value, num2.value);
+            } else if (radio2.checked) {
+                p.textContent = text2.textContent.substr(num1.value, num2.value);
+            } else {
+                p.textContent = '你还没选';
+            }
+        });
+
+        // 把所选输入框中的内容全部转为大写
+        btn9.addEventListener('click', function() {
+            if (radio1.checked) {
+                p.textContent = text1.textContent.toUpperCase();
+            } else if (radio2.checked) {
+                p.textContent = text2.textContent.toUpperCase();
+            } else {
+                p.textContent = '你还没选';
+            }            
+        });
+
+        // 把所选输入框中的内容全部转为小写
+        btn10.addEventListener('click', function() {
+            if (radio1.checked) {
+                p.textContent = text1.textContent.toLowerCase();
+            } else if (radio2.checked) {
+                p.textContent = text2.textContent.toLowerCase();
+            } else {
+                p.textContent = '你还没选';
+            }            
+        });   
+
+        // 把所选输入框中内容的半角空格全部去除
+        btn11.addEventListener('click', function() {
+            if (radio1.checked) {
+                p.textContent = text1.textContent.replace(/\s+/g, '');
+            } else if (radio2.checked) {
+                p.textContent = text2.textContent.replace(/\s+/g, '');
+            } else {
+                p.textContent = '你还没选';
+            }       
+        });
+
+        // 把所选输入框中内容的a全部替换成另外一个输入框中的内容
+        btn12.addEventListener('click', function() {
+            if (radio1.checked) {
+                p.textContent = text1.textContent.replace(/a+/g, text2.textContent);
+            } else if (radio2.checked) {
+                p.textContent = text2.textContent.replace(/a+/g, text1.textContent);
+            } else {
+                p.textContent = '你还没选';
+            }      
+        });                
+    </script>
+</body>
+</html>

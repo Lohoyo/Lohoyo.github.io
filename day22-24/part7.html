@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE Task13 Part7</title>
+</head>
+
+<body>      
+
+    <input id="stack-input" type="text">
+    <p id="stack-cont">栈内容：apple-&gt;pear</p>    
+    <button id="push-btn">进栈</button>
+    <button id="pop-btn">退栈</button>
+    <button id="font-btn">打印栈顶元素内容</button>
+    <button id="empty-btn">判断栈是否为空</button>
+    
+    <script>
+
+        var stack = ["apple", "pear"];
+        var input = document.querySelector('#stack-input');
+        var p = document.querySelector('p');
+        var btn1 = document.querySelector('#push-btn');
+        var btn2 = document.querySelector('#pop-btn');
+        var btn3 = document.querySelector('#font-btn');
+        var btn4 = document.querySelector('#empty-btn');
+        
+        btn1.addEventListener('click', function() {
+            stack.push(input.value);
+            p.textContent = '栈内容：' + stack.join('<-');
+        });
+
+        btn2.addEventListener('click', function() {
+            stack.pop();
+            p.textContent = '栈内容：' + stack.join('<-');
+        });    
+
+        btn3.addEventListener('click', function() {
+            p.textContent = stack[stack.length-1];
+        });           
+
+        btn4.addEventListener('click', function() {
+            if (stack.length === 0) {
+                p.textContent = '栈是空的';
+            } else {
+                p.textContent = '栈不是空的';
+            }
+        });                   
+        
+    </script>
+</body>
+</html>

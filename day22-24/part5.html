@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE Task13 Part5</title>
+</head>
+
+<body>      
+
+    <input id="queue-input" type="text">
+    <p id="queue-cont">队列内容：apple-&gt;pear</p>    
+    <button id="in-btn">入队</button>
+    <button id="out-btn">出队</button>
+    <button id="font-btn">打印队头元素内容</button>
+    <button id="empty-btn">判断队列是否为空</button>
+    
+    <script>
+
+        var queue = ["apple", "pear"];
+        var input = document.querySelector('#queue-input');
+        var p = document.querySelector('p');
+        var btn1 = document.querySelector('#in-btn');
+        var btn2 = document.querySelector('#out-btn');
+        var btn3 = document.querySelector('#font-btn');
+        var btn4 = document.querySelector('#empty-btn');
+        
+        btn1.addEventListener('click', function() {
+            queue.unshift(input.value);
+            p.textContent = '队列内容：' + queue.join('->');
+        });
+
+        btn2.addEventListener('click', function() {
+            queue.pop();
+            p.textContent = '队列内容：' + queue.join('->');
+        });    
+
+        btn3.addEventListener('click', function() {
+            p.textContent = queue[queue.length-1];
+        });           
+
+        btn4.addEventListener('click', function() {
+            if (queue.length === 0) {
+                p.textContent = '队列是空的';
+            } else {
+                p.textContent = '队列不是空的';
+            }
+        });                   
+        
+    </script>
+</body>
+</html>

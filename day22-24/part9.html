@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE Task13 Part9</title>
+</head>
+
+<body>      
+    <script>
+        // 第一小题
+        // var arr = [43, 54, 4, -4, 84, 100, 58, 27, 140];
+        // function compare(val1, val2) {
+        //     return val1 - val2;
+        // }
+        // arr.sort(compare);
+        // console.log(arr);
+        // console.log(arr.reverse());
+        
+        // 第二小题
+        // var arr = ['apple', 'dog', 'cat', 'car', 'zoo', 'orange', 'airplane'];
+        // console.log(arr.sort());
+        // console.log(arr.reverse());
+
+        // 第三小题
+        // var arr = [[10, 14], [16, 60], [7, 44], [26, 35], [22, 63]];
+        // function compare(val1, val2) {
+        //     return val2[1] - val1[1];
+        // }
+        // console.log(arr.sort(compare));
+
+        // 第四小题
+        var arr = [
+            {
+                id: 1,
+                name: 'candy',
+                value: 40
+            }, {
+                id: 2,
+                name: 'Simon',
+                value: 50
+            }, {
+                id: 3,
+                name: 'Tony',
+                value: 45
+            }, {
+                id: 4,
+                name: 'Annie',
+                value: 60
+            }
+        ];       
+        function compare(val1, val2) {
+            return val1.value - val2.value;
+        }
+        console.log(arr.sort(compare));
+    </script>
+</body>
+</html>
