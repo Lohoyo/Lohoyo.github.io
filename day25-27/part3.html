@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE Day25-27 Part3</title>
+</head>
+
+<body>      
+    <script>
+        var h1 = document.createElement('h1');
+        var html = document.querySelector('html');
+        html.appendChild(h1);
+        window.setInterval(time, 1000);
+        function time() {
+            h1.textContent = Result(new Date());
+        }
+        
+        function Year(date) {
+            return date.getFullYear();
+        }
+
+        function Month(date) {
+            return Format(date.getMonth() + 1);
+        }
+
+        function Day(date) {
+            return Format(date.getDate());
+        }        
+        
+        function Week(date) {
+            switch (date.getDay()) {
+                case 0: return 'Monday';
+                case 1: return 'Tuesday';
+                case 2: return 'Wednesday';
+                case 3: return 'Thursday';
+                case 4: return 'Friday';
+                case 5: return 'Saturday';
+                case 6: return 'Sunday';
+            }
+        }
+
+        function Hour(date) {
+            return Format(date.getHours());
+        }
+
+        function Minute(date) {
+            return Format(date.getMinutes());
+        }    
+
+        function Second(date) {
+            return Format(date.getSeconds());
+        }
+
+        function AMPM(date) {
+            return date.getHours() < 12 ? 'AM' : 'PM';
+        }
+        
+        // 位数的补齐
+        function Format(num) {
+            return num < 10 ? '0' + num : num;
+        }
+
+        // 包装最终的结果
+        function Result(date) {
+            return Year(date) + '-' + Month(date) + '-' + Day(date) + ' ' + Week(date) + ' ' + Hour(date) + ':' + Minute(date) + ':' + Second(date) + ' ' + AMPM(date);
+        }
+
+    </script>
+</body>
+</html>

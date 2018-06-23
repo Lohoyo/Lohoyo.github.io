@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE Day25-27 Part2</title>
+</head>
+
+<body>      
+    <script>
+        var h1 = document.createElement('h1');
+        var html = document.querySelector('html');
+        html.appendChild(h1);
+        window.setInterval(time, 1000);
+        function time() {
+            h1.textContent = Result(new Date());
+        }
+        
+        function Year(date) {
+            return date.getFullYear();
+        }
+
+        function Month(date) {
+            return Format(date.getMonth() + 1);
+        }
+
+        function Day(date) {
+            return Format(date.getDate());
+        }        
+        
+        function Week(date) {
+            switch (date.getDay()) {
+                case 0: return '一';
+                case 1: return '二';
+                case 2: return '三';
+                case 3: return '四';
+                case 4: return '五';
+                case 5: return '六';
+                case 6: return '日';
+            }
+        }
+
+        function Hour(date) {
+            return Format(date.getHours());
+        }
+
+        function Minute(date) {
+            return Format(date.getMinutes());
+        }    
+
+        function Second(date) {
+            return Format(date.getSeconds());
+        }
+        
+        // 位数的补齐
+        function Format(num) {
+            return num < 10 ? '0' + num : num;
+        }
+
+        // 包装最终的结果
+        function Result(date) {
+            return Year(date) + '年' + Month(date) + '月' + Day(date) + '日星期' + Week(date) + ' ' + Hour(date) + ':' + Minute(date) + ':' + Second(date);
+        }
+
+    </script>
+</body>
+</html>
