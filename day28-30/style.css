@@ -1,0 +1,13 @@
+li:hover {
+    background-color: aqua;
+}
+
+.selected {
+    background-color: antiquewhite;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 3px;
+    color: rgba(0, 0, 0, 0.4);
+}
