@@ -102,7 +102,7 @@ function newTable(data) {
             canvas.height = canvas.height;
             line.draw();
             line.setDataAll(data[1]);
-            rawDatasCopy = data[1];
         });        
     }
+    rawDatasCopy = data[1];
 }
