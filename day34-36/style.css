@@ -1,0 +1,28 @@
+canvas {
+    float: right;
+}
+
+div[id*='wrapper'] {
+    text-align: center;
+}
+
+table {
+    clear: both;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+}
+
+th, td {
+    border: solid;
+    text-align: center;
+}
+
+th {
+    width: 50px;
+}
+
+th:first-of-type {
+    width: 80px;
+}
