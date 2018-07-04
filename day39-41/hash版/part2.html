@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE Day39-41 part2</title>
+</head>
+<body>
+    <button id="a">A</button>
+    <button id="b">B</button>
+    <button id="c">C</button>
+
+    <button id="d">D</button>
+    <button id="e">E</button>
+    <button id="f">F</button>
+
+
+    <div id="contABC"></div>
+    <div id="contDEF"></div>
+
+    <script>
+        var divs = document.querySelectorAll('div');
+        var btns = document.querySelectorAll('button');
+
+        // 解析Hash，获取状态参数
+        function parseHash() {
+            var arr = ['', ''];
+            if (location.hash.substr(location.hash.indexOf('#') + 1, 1) !== '/') {
+                arr[0] = location.hash.substr(location.hash.indexOf('#') + 1, 1);
+            }
+            if (location.hash.lastIndexOf('/') + 1) {
+                arr[1] = location.hash.substr(location.hash.lastIndexOf('/') + 1, 1);
+            }
+            return arr;
+        }
+
+        // 渲染函数
+        function render() {
+            divs[0].textContent = parseHash()[0];
+            divs[1].textContent = parseHash()[1];
+        }
+
+        // 按钮点击事件
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function() {
+                if (this.textContent === 'A'  || this.textContent === 'B'  || this.textContent === 'C') {
+                    if (divs[0].textContent) {
+                        location.hash = location.hash.replace(location.hash.substr(location.hash.indexOf('#') + 1, 1), this.textContent);
+                    } else {
+                        location = location.href.replace(location.href.substr(location.href.indexOf('#'), 1), '#' + this.textContent);
+                    }
+                } else {
+                    if (divs[1].textContent) {
+                        location.hash = location.hash.replace(location.hash.substr(location.hash.lastIndexOf('/') + 1, 1), this.textContent)
+                    } else {
+                        location += '/' + this.textContent;
+                    }            
+                }
+            });
+        }
+
+        window.addEventListener('hashchange', function() {
+            render();
+        });
+
+        location.hash = '#';
+        render();    
+    </script>
+</body>
+</html>

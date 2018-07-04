@@ -1,0 +1,10 @@
+var region = document.querySelector('#region-radio-wrapper');
+var product = document.querySelector('#product-radio-wrapper');
+var table = document.querySelector('table');
+var canvas = document.querySelector('canvas');
+var ctx = canvas.getContext('2d');
+var svg = document.querySelector('svg');
+var rawDatasCopy = null;
+var html = document.querySelector('html');
+var button = document.querySelector('button');
+var checkboxes = document.querySelectorAll('div input');

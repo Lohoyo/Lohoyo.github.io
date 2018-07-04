@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE Day39-41 part1</title>
+</head>
+<body>
+    <button id="a">A</button>
+    <button id="b">B</button>
+    <button id="c">C</button>
+    <div id="cont"></div>
+
+    <script>
+        var div = document.querySelector('div');
+        var btns = document.querySelectorAll('button');
+
+        // 解析Hash，获取状态参数
+        function parseHash() {
+            return location.hash.slice(1);
+        }
+
+        // 渲染函数
+        function render() {
+            div.textContent = parseHash();
+        }
+
+        // 按钮点击事件
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function() {
+                location.hash = '#' + this.textContent;
+            });
+        }
+
+        window.addEventListener('hashchange', function() {
+            render();
+        });
+
+        render();        
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE Day39-41 part2</title>
+</head>
+<body>
+    <button id="a">A</button>
+    <button id="b">B</button>
+    <button id="c">C</button>
+
+    <button id="d">D</button>
+    <button id="e">E</button>
+    <button id="f">F</button>
+
+
+    <div id="contABC"></div>
+    <div id="contDEF"></div>
+
+    <script>
+        var divs = document.querySelectorAll('div');
+        var btns = document.querySelectorAll('button');
+
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', function() {
+                var state = history.state;
+                if (!state) {
+                    state = {
+                        contABC: '',
+                        contDEF: ''
+                    }
+                }
+                if (this.textContent === 'A'  || this.textContent === 'B'  || this.textContent === 'C') {
+                    state.contABC = this.textContent;
+                    history.pushState(state, '');
+                } else {
+                    state.contDEF = this.textContent;
+                    history.pushState(state, '');
+                }
+                    divs[0].textContent = history.state.contABC;
+                    divs[1].textContent = history.state.contDEF;
+            });
+        }
+
+        window.addEventListener('popstate', function(e) {
+            if (e.state) {
+                divs[0].textContent = history.state.contABC;
+                divs[1].textContent = history.state.contDEF;
+            } else {
+                divs[0].textContent = '';
+                divs[1].textContent = '';                
+            }
+
+        });  
+    </script>
+</body>
+</html>
