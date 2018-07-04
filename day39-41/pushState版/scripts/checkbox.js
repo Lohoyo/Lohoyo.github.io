@@ -29,7 +29,7 @@ function main(div) {
             if (i !== 3 && i !== 7 && checkboxes[i].checked) {
                 arr.push(i);
             }
-            history.replaceState({checked: arr}, '');
+            history.replaceState({checked: arr}, '', '#checked');
         }        
     });
 }
