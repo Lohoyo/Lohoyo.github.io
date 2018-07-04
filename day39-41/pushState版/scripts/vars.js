@@ -8,3 +8,4 @@ var rawDatasCopy = null;
 var html = document.querySelector('html');
 var button = document.querySelector('button');
 var checkboxes = document.querySelectorAll('div input');
+count = 0;
