@@ -47,16 +47,18 @@ var line = {
         }
     },
     setDataAll: function(rawDatas) {
-        var colors = ['aqua', 'cadetblue', 'blue', 'brown', 'blueviolet', 'green', 'gold', 'hotpink', 'olive'];
-        for (var i = 0, max = Number(rawDatas[0][0]); i < rawDatas.length; i++) {
-            for (var j = 0; j < rawDatas[i].length; j++) {
-                if (max < Number(rawDatas[i][j])) {
-                    max = Number(rawDatas[i][j]);
-                }                
+        if (rawDatas[0]) {
+            var colors = ['aqua', 'cadetblue', 'blue', 'brown', 'blueviolet', 'green', 'gold', 'hotpink', 'olive'];
+            for (var i = 0, max = Number(rawDatas[0][0]); i < rawDatas.length; i++) {
+                for (var j = 0; j < rawDatas[i].length; j++) {
+                    if (max < Number(rawDatas[i][j])) {
+                        max = Number(rawDatas[i][j]);
+                    }                
+                }
             }
-        }
-        for (var i = 0; i < rawDatas.length; i++) {
-            this.setData(rawDatas[i], colors[i], max, 10 + 11 * i);
+            for (var i = 0; i < rawDatas.length; i++) {
+                this.setData(rawDatas[i], colors[i], max, 10 + 11 * i);
+            }
         }
     }
 };
