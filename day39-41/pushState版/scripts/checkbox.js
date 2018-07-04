@@ -23,13 +23,5 @@ function main(div) {
         line.draw();
         newTable(getData());  
         addBlur();  
-
-        // 按钮点击事件
-        for (var i = 0, arr = []; i < checkboxes.length; i++) {
-            if (i !== 3 && i !== 7 && checkboxes[i].checked) {
-                arr.push(i);
-            }
-            history.replaceState({checked: arr}, '', '#checked');
-        }        
     });
 }
