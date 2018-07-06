@@ -41,3 +41,7 @@ input.active {
 td.active {
     width: 129px;
 }
+
+div:first-of-type {
+    margin-top: 5%;
+}
