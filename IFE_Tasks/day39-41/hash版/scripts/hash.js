@@ -10,14 +10,15 @@ function render() {
             if (j !== 3 && j !== 7 && checkboxes[j].id === parseHash()[i]) {
                 checkboxes[j].setAttribute('checked', '');
             }
-        }
-        if (checkboxes[0].checked && checkboxes[1].checked &&checkboxes[2].checked) {
-            checkboxes[3].setAttribute('checked', '');
-        }
-        if (checkboxes[4].checked && checkboxes[5].checked &&checkboxes[6].checked) {
-            checkboxes[7].setAttribute('checked', '');
-        }        
+        } 
     }
+    if (checkboxes[0].checked && checkboxes[1].checked &&checkboxes[2].checked) {
+        checkboxes[3].setAttribute('checked', '');
+    }
+    if (checkboxes[4].checked && checkboxes[5].checked &&checkboxes[6].checked) {
+        checkboxes[7].setAttribute('checked', '');
+    }
+    newTable(getData());       
 }
 
 // 按钮点击事件放在了checkbox.js里
