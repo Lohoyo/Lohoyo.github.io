@@ -1,0 +1,40 @@
+html {
+    font-size: 1.5rem;
+}
+
+li:hover {
+    background-color: aqua;
+}
+
+.selected {
+    background-color: antiquewhite;
+}
+
+ul {
+    margin-top: 5px;
+    list-style-type: none;
+    padding-left: 3px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.wrapper:nth-of-type(1) {
+    height: 200px;
+}
+
+.wrapper:nth-of-type(2) {
+    text-align: center;
+}
+
+article {
+    position: absolute;
+    top: calc(50% - 264px);
+    left: calc(50% - 150px);
+}
+
+input {
+    width: 298px;
+}
+
+button {
+    font-size: 1.5rem;
+}
