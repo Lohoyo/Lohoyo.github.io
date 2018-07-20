@@ -48,9 +48,15 @@ Waiter.prototype.doSomeWork = function() {
 
 // 顾客引用类型
 function Customer() {}
-Customer.prototype.eat = function() {
+Customer.prototype = {
+    constructor: Customer,
+    order: function() {
 
-};
+    },
+    eat: function() {
+
+    }
+}
 
 // 菜品引用类型
 function Dish(name, cost, price) {
